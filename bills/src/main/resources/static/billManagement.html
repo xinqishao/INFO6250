@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bill Management System</h1>
+    </header>
+    <main>
+        <section id="billManagement">
+            <h2>Manage Your Bills</h2>
+
+            <!-- 表格显示账单记录 -->
+            <table id="billTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JavaScript 会动态填充这里的表格数据 -->
+                </tbody>
+            </table>
+
+            <!-- 按钮打开添加账单的模态窗口 -->
+            <button id="openAddBillModal">Add Bill</button>
+
+            <!-- 删除账单按钮 -->
+            <button id="deleteButton">Delete Selected Bill</button>
+        </section>
+    </main>
+
+    <!-- 模态窗口 -->
+    <div id="addBillModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="billForm">
+          <input type="text" id="description" placeholder="Description" required>
+          <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+          <button type="submit">Add Bill</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="billManagement.js"></script>
+</body>
+</html>
